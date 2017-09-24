@@ -1,8 +1,6 @@
 const path = require('path');
 const fs = require('fs-extra');
 
-// TODO: this should be a package or we should use one that does same thing
-// <https://github.com/queckezz/koa-views/blob/master/src/index.js>
 function getPaths(abs, rel, ext) {
   return fs
     .stat(path.join(abs, rel))
