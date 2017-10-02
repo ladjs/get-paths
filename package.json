@@ -2,7 +2,7 @@
   "name": "get-paths",
   "description":
     "Helper function to get an absolute path for a template engine view",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "bugs": {
     "url": "https://github.com/niftylettuce/get-paths/issues",
