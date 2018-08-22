@@ -1,9 +1,11 @@
 const path = require('path');
-const fs = require('fs-extra');
+const fs = require('fs');
+const Promise = require('bluebird');
+
+const stat = Promise.promisify(fs.stat);
 
 function getPaths(abs, rel, ext) {
-  return fs
-    .stat(path.join(abs, rel))
+  return stat(path.join(abs, rel))
     .then(stats => {
       if (stats.isDirectory()) {
         // a directory
