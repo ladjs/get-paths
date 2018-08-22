@@ -1,7 +1,8 @@
 {
   "name": "get-paths",
-  "description": "Helper function to get an absolute path for a template engine view",
-  "version": "0.0.2",
+  "description":
+    "Helper function to get an absolute path for a template engine view",
+  "version": "0.0.4",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "bugs": {
     "url": "https://github.com/niftylettuce/get-paths/issues",
@@ -38,26 +39,18 @@
     "node": ">=6.4"
   },
   "homepage": "https://github.com/niftylettuce/get-paths",
-  "keywords": [
-    "get-paths",
-    "lass"
-  ],
+  "keywords": ["get-paths", "lass"],
   "license": "MIT",
   "lint-staged": {
     "*.{js,jsx,mjs,ts,tsx,css,less,scss,json,graphql}": [
       "prettier --write --single-quote --trailing-comma none",
       "git add"
     ],
-    "*.md": [
-      "remark . -qfo",
-      "git add"
-    ]
+    "*.md": ["remark . -qfo", "git add"]
   },
   "main": "index.js",
   "remarkConfig": {
-    "plugins": [
-      "preset-github"
-    ]
+    "plugins": ["preset-github"]
   },
   "repository": {
     "type": "git",
@@ -72,9 +65,7 @@
   },
   "xo": {
     "extends": "prettier",
-    "plugins": [
-      "prettier"
-    ],
+    "plugins": ["prettier"],
     "parserOptions": {
       "sourceType": "script"
     },
