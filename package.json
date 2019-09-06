@@ -1,7 +1,7 @@
 {
   "name": "get-paths",
   "description": "Helper function to get an absolute path for a template engine view",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "ava": {
     "failFast": true,
