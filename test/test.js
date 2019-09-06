@@ -1,6 +1,6 @@
 const test = require('ava');
 
-const getPaths = require('../');
+const getPaths = require('..');
 
 test('returns a function', t => {
   t.true(typeof getPaths === 'function');

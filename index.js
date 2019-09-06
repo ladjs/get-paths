@@ -1,11 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-const Promise = require('bluebird');
-
-const stat = Promise.promisify(fs.stat);
+const pify = require('pify');
 
 function getPaths(abs, rel, ext) {
-  return stat(path.join(abs, rel))
+  return pify(fs.stat)(path.join(abs, rel))
     .then(stats => {
       if (stats.isDirectory()) {
         // a directory
@@ -14,6 +12,7 @@ function getPaths(abs, rel, ext) {
           ext
         };
       }
+
       // a file
       return { rel, ext: path.extname(rel).slice(1) };
     })
@@ -24,6 +23,7 @@ function getPaths(abs, rel, ext) {
         // so append to it to try another lookup
         return getPaths(abs, `${rel}.${ext}`, ext);
       }
+
       throw err;
     });
 }
